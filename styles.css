@@ -1,3 +1,36 @@
+:root {
+    --background-color: #ffffff;
+    --background-color-variant: #efefef;
+    --text-color: #242424;
+    --main-color: #49735f;
+    --main-color-variant: #d4ddd9;
+    --accent-color: #a66460;
+    --highlight-color: #147d93;
+  
+    --text-color-dark-bg: #ffffff;
+    --text-color-headlines: var(--main-color);
+    --nav-active-color: var(--main-color);
+  
+    --font-family-body: Helvetica, Arial, sans-serif;
+    --font-family-monospace: "VT323", "Courier New", Courier, monospace;
+  
+    --grid-gap: 16px;
+  }
+
+body {
+    font-family: var(--font-family-body);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    font-size: 1.125rem;
+  }
+
+h1 {
+    font-size: 2.8rem;
+    font-family: "Courier New", Courier, monospace;
+    color: #000000;
+    text-align: center;
+  }
+
 
 #navmenu {
     padding: 0; 
