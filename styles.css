@@ -1,20 +1,18 @@
 :root {
    --background-color: #ffffff;
-   --background-color-variant: #efefef;
-   --text-color: #242424;
+   --text-color: #2a2a2a;
    --main-color: #49735f;
-   --main-color-variant: #d4ddd9;
-   --accent-color: #a66460;
-   --highlight-color: #147d93;
 
    --text-color-dark-bg: #ffffff;
    --text-color-headlines: var(--main-color);
-   --nav-active-color: var(--main-color);
+   --nav-inactive-color: #a0a0a0;
 
    --font-family-body: Helvetica, Arial, sans-serif;
    --font-family-monospace: "VT323", "Courier New", Courier, monospace;
 
    --grid-gap: 16px;
+   --navmenu-width: 260px;
+
 }
 
 body {
@@ -27,68 +25,56 @@ body {
 h1 {
    font-size: 2.8rem;
    font-family: var(--font-family-monospace);
-   color: #000000;
+   color:var(--text-color);
    text-align: center;
    font-weight: 100;
 }
 
 
-/*TODO remove W3-comments*/
-
 /* The sidebar menu */
 .navmenu {
    height: 100%;
-   /* Full-height: remove this if you want "auto" height */
-   width: 160px;
-   /* Set the width of the sidebar */
-   position: fixed;
-   /* Fixed Sidebar (stay in place on scroll) */
-   z-index: 1;
-   /* Stay on top */
-   /* top: 0; */
-   /* Stay at the top */
+   width: var(--navmenu-width);
+   position: fixed; /*stays in position while scrolling*/
    left: 0;
-   overflow-x: hidden;
    font-family: var(--font-family-monospace);
 }
 
-.center-list {
-   margin: 0;
-   position: absolute;
-   top: 50%;
-   -ms-transform: translateY(-50%);
-   transform: translateY(-50%);
-   border-right: 1px solid lightgray;
+.right-nav-border {
+   border-right: 1px solid var(--nav-inactive-color);
 }
 
 /* The navigation menu links */
 .navmenu a {
-   padding: 6px 8px 6px 16px;
-   text-decoration: none;
-   font-size: 25px;
-   color: black;
+   padding: 4px 12px;
+   text-decoration: none; /*removes underline from hyperlink*/
+   color: var(--text-color);
    display: block;
 }
 
-/* When you mouse over the navigation links, change their color */
-.navmenu a:hover {
-   color: gray;
-   filter: blur(0.5px);
-}
 .navmenu-item {
-   font-size: 12px;
+   font-size: 1.5rem;
 }
 
-/* Style page content */
+.center-vertical {
+   margin: 0;
+   position: absolute;
+   top: 50%;
+   /* -ms-transform: translateY(-50%); */ /*dunno why*/
+   transform: translateY(-50%);
+}
+
+/*here lives the page content*/
 .main {
-   margin-left: 160px;
+   margin-left:  var(--navmenu-width);
+   padding: 10px;
    /* Same as the width of the sidebar */
-   padding: 0px 10px;
+
 }
 
 ul:hover a {
    filter: blur(1px);
-   color: #999;
+   color: var(--nav-inactive-color)
 }
 
 ul:hover a:hover {
