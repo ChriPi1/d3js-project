@@ -45,15 +45,16 @@ h1 {
 }
 
 /* The navigation menu links */
-.navmenu a {
-   padding: 4px 12px;
+.navmenu button {
+   padding: 12px 12px;
    text-decoration: none; /*removes underline from hyperlink*/
    color: var(--text-color);
    display: block;
-}
-
-.navmenu-item {
-   font-size: 1.5rem;
+   border: none;
+   background: none;
+   font: var(--font-family-monospace);
+   font-size: 1.8rem;
+   text-align: left;
 }
 
 .center-vertical {
@@ -72,11 +73,12 @@ h1 {
 
 }
 
-ul:hover a {
-   filter: blur(1px);
+ul:hover button {
+   filter: blur(2px);
    color: var(--nav-inactive-color)
 }
 
-ul:hover a:hover {
+ul:hover button:hover {
    filter: blur(0px);
+   color: var(--text-color)
 }
