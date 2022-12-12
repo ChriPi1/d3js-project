@@ -82,3 +82,35 @@ ul:hover button:hover {
    filter: blur(0px);
    color: var(--text-color)
 }
+
+.aboutUs {
+    padding: 50px;
+    text-align: center;
+    /*background-color: #474e5d;*/
+}
+
+.about-us-column {
+    float: left;
+    width: 15.5%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+
+.card-collaborator {
+    box-shadow: 0 4px 8px 0 var(--text-color);
+    margin: 8px;
+}
+
+.about-us-img {
+    object-fit:contain;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    display: block;
+}
+
+.inforamtions-collaborator {
+    padding: 0 16px;
+    font-family: var(--font-family-monospace);
+    font-size: 1.2rem;
+}
