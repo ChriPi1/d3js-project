@@ -41,7 +41,7 @@ h1 {
 }
 
 .right-nav-border {
-   border-right: 1px solid var(--nav-inactive-color);
+   border-right: 2px solid var(--nav-inactive-color);
 }
 
 /* The navigation menu links */
@@ -67,10 +67,9 @@ h1 {
 
 /*here lives the page content*/
 .main {
-   margin-left:  var(--navmenu-width);
+   margin-left: var(--navmenu-width);
    padding: 10px;
    /* Same as the width of the sidebar */
-
 }
 
 ul:hover button {
@@ -83,34 +82,49 @@ ul:hover button:hover {
    color: var(--text-color)
 }
 
-.aboutUs {
-    padding: 50px;
-    text-align: center;
-    /*background-color: #474e5d;*/
+.portrait-image {
+   height: 200px;
+   display: block;
+   margin: 25px;
+   alignment: right;
+   box-shadow: 10px 10px 10px var(--nav-inactive-color);
 }
 
-.about-us-column {
-    float: left;
-    width: 15.5%;
-    margin-bottom: 16px;
-    padding: 0 8px;
+.about-entry {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   text-align: center;
+   vertical-align: center;
+   margin-right: 100px;
 }
 
-.card-collaborator {
-    box-shadow: 0 4px 8px 0 var(--text-color);
-    margin: 8px;
+.about-entry > div {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
 }
 
-.about-us-img {
-    object-fit:contain;
-    width: 300px;
-    height: 300px;
-    margin: auto;
-    display: block;
+.about-entry > div:last-child {
+   flex-direction: row-reverse;
 }
 
-.inforamtions-collaborator {
-    padding: 0 16px;
-    font-family: var(--font-family-monospace);
-    font-size: 1.2rem;
+.about-text {
+   color: var(--text-color);
+   font-family: var(--font-family-monospace);
+   font-style: italic;
+   font-size: 1.2rem;
+}
+
+.generic-text {
+   color: var(--text-color);
+   font-family: var(--font-family-monospace);
+   font-size: 1.2rem;
+   margin: 50px;
+}
+
+.info-graphic {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
 }

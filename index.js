@@ -1,10 +1,14 @@
+function initBody() {
+    let main = document.getElementById('main');
+    for(let i = 2; i < main.children.length; i++) {
+        main.children[i].style.display = "none";
+    }
+}
+
 /*this function hides/shows divs, because only one html-file is allowed
 for grading (atleast that's what we think)*/
 function showChapter(chapterID) {
    let main = document.getElementById('main');
-   console.log(main.children.dataBasedDocuments);
-   main.children.dataBasedDocumentsChapter.style.display = "none";
-
    for(let i = 1; i < main.children.length; i++) {
       main.children[i].style.display = "none";
    }
