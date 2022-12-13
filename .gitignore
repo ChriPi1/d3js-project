@@ -1,2 +1,4 @@
 .idea
-*.drawio
+ressources/*.drawio
+ressources/*.bkp
+ressources/*.dtmp
