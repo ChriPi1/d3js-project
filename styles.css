@@ -1,55 +1,54 @@
 :root {
    --background-color: #ffffff;
    --text-color: #2a2a2a;
-   --main-color: #49735f;
-
-   --text-color-dark-bg: #ffffff;
-   --text-color-headlines: var(--main-color);
-   --nav-inactive-color: #a0a0a0;
-
-   --font-family-body: Helvetica, Arial, sans-serif;
-   --font-family-monospace: "VT323", "Courier New", Courier, monospace;
-
-   --grid-gap: 16px;
+   --inactive-color: #a0a0a0;
+   --background-grid-color: #e9e9e9;
+   --font-family-monospace: "Courier New", Courier, monospace;
    --navmenu-width: 260px;
-
 }
 
 body {
-   font-family: var(--font-family-body);
-   color: var(--text-color);
    background-color: var(--background-color);
-   font-size: 1.125rem;
+   font-size: 1.2rem;
+   font-family: var(--font-family-monospace);
+   color:var(--text-color);
+   /*generating gridlines with very narrow gradients, lil bit hacky*/
+   background-image: linear-gradient(var(--background-grid-color) 0.1rem, transparent 0.1rem), linear-gradient(90deg, var(--background-grid-color) .1rem, transparent .1rem);
+   backdrop-filter: blur(2px);
+   background-size: 1.8rem 1.8rem;
+   /*next 3 lines needed for correct layout with blurry background*/
+   width: 100%;
+   height: 100%;
+   margin: 0;
 }
 
 h1 {
    font-size: 2.8rem;
-   font-family: var(--font-family-monospace);
-   color:var(--text-color);
    text-align: center;
    font-weight: 100;
 }
 
+.chapter {
+   /*initial value, overwritten by index.js for page navigation*/
+   display: none;
+}
 
-/* The sidebar menu */
+/*sidebar menu*/
 .navmenu {
    height: 100%;
    width: var(--navmenu-width);
-   position: fixed; /*stays in position while scrolling*/
+   /*stays in position while scrolling*/
+   position: fixed; 
    left: 0;
-   font-family: var(--font-family-monospace);
 }
 
-.right-nav-border {
-   border-right: 2px solid var(--nav-inactive-color);
+.right-navmenu-border {
+   border-right: 2px solid var(--inactive-color);
 }
 
-/* The navigation menu links */
 .navmenu button {
    padding: 12px 12px;
-   text-decoration: none; /*removes underline from hyperlink*/
    color: var(--text-color);
-   display: block;
    border: none;
    background: none;
    font: var(--font-family-monospace);
@@ -61,41 +60,40 @@ h1 {
    margin: 0;
    position: absolute;
    top: 50%;
-   /* -ms-transform: translateY(-50%); */ /*dunno why*/
    transform: translateY(-50%);
+}
+
+/*blur all buttons while hovering over navmenu*/
+ul:hover button {
+   filter: blur(2px);
+   color: var(--inactive-color)
+}
+
+/*unblur the the pointed button*/
+ul:hover button:hover {
+   filter: blur(0px);
+   color: var(--text-color);
 }
 
 /*here lives the page content*/
 .main {
    margin-left: var(--navmenu-width);
    padding: 10px;
-   /* Same as the width of the sidebar */
 }
 
-ul:hover button {
-   filter: blur(2px);
-   color: var(--nav-inactive-color)
-}
-
-ul:hover button:hover {
-   filter: blur(0px);
-   color: var(--text-color)
+.about-chapter {
+   margin: 100px 0px 0px 200px;
 }
 
 .portrait-image {
    height: 200px;
    display: block;
-   margin: 25px;
-   alignment: right;
-   box-shadow: 10px 10px 10px var(--nav-inactive-color);
 }
 
 .about-entry {
    display: flex;
    flex-direction: column;
-   width: 100%;
-   text-align: center;
-   vertical-align: center;
+   width: 80%;
    margin-right: 100px;
 }
 
@@ -110,16 +108,12 @@ ul:hover button:hover {
 }
 
 .about-text {
-   color: var(--text-color);
-   font-family: var(--font-family-monospace);
    font-style: italic;
-   font-size: 1.2rem;
+   width: 50%;
+   margin: 24px;
 }
 
 .generic-text {
-   color: var(--text-color);
-   font-family: var(--font-family-monospace);
-   font-size: 1.2rem;
    margin: 50px;
 }
 
