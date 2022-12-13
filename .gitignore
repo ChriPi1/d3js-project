@@ -1,4 +1,13 @@
-.idea
-ressources/*.drawio
-ressources/*.bkp
-ressources/*.dtmp
+# Ignore everything
+*
+
+# But not these files...
+!.gitignore
+!.html
+!.css
+!.js
+# etc...
+
+# ...even if they are in subdirectories
+!*/ressources/*.svg
+!*/images/*.png
