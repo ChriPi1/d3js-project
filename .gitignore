@@ -1,8 +1,10 @@
 # Ignore everything
 *
+.*
+
 
 # But not these files...
-!.gitignore
+!/gitignore
 !.html
 !.css
 !.js
@@ -11,3 +13,4 @@
 # ...even if they are in subdirectories
 !*/ressources/*.svg
 !*/images/*.png
+*/ressources/*.
