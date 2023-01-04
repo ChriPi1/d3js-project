@@ -27,14 +27,15 @@
                 ]}
             ] },
     {"name" : "A5", "children" : [
-        {"name" : "A21" },
-        {"name" : "A22", "children" : [
-            {"name" : "A221" },
-            {"name" : "A222" },
-            {"name" : "A223" },
-            {"name" : "A224" }
-    ]},
-        {"name" : "A23" },
-        {"name" : "A24" },
-        {"name" : "A25" }] }
+            {"name" : "A21" },
+            {"name" : "A22", "children" : [
+                    {"name" : "A221" },
+                    {"name" : "A222" },
+                    {"name" : "A223" },
+                    {"name" : "A224" }
+                ]},
+            {"name" : "A23" },
+            {"name" : "A24" },
+            {"name" : "A25" }
+            ] }
 ]}

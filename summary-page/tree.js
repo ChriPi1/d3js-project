@@ -125,7 +125,7 @@ let createRadialTree = function (input) {
     let height = 800;
     let width = 800;
 
-    let svg = d3.select('body')
+    let svg = d3.select('#tree-example')
         .append('svg')
         .attr('width', width)
         .attr('height', height);
@@ -147,10 +147,10 @@ let createRadialTree = function (input) {
     let graphGroup = svg.append('g')
         .attr('transform', "translate("+(width/2)+","+(height/2)+")");
 
-    graphGroup.selectAll(".link")
+    graphGroup.selectAll(".link-tree")
         .data(links)
         .join("path")
-        .attr("class", "link")
+        .attr("class", "link-tree")
         .attr("d", d3.linkRadial()
             .angle(d => d.x)
             .radius(d => d.y));
