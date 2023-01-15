@@ -35,17 +35,32 @@
             </p>
             <img class="info-graphic" style="width: 30%" src="ressources/DatabasedDocument_mock.svg" alt="Do not forget in final version"></img>
          </div>
-         <!-- d3js explanation -->
+         <!-- d3js explanation TODO ALLIGN CONTENT-->
          <div class="chapter" id="d3jsChapter">
-            <p class="generic-text">
-               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-               dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-               clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-               consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-               sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-               sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>
-            <img class="info-graphic" style="width: 50%" src="ressources/d3js.svg" alt="Do not forget in final version"></img>
+            <div class="generic-text" style="width: 60vw;">
+               <p>
+                  d3.js is library for manipulating documents based on data.</br>
+                  Documents in this context mean html-documents, used for manipulating the DOM. </br>
+                  Unlike similar DOM-manipulating libraries, it's main purpose is data-visualization and document-content
+                  creation with strong connection to dynamic data.
+                  d3.js enables automatically (re-)rendering elements in your document, based on the data it is linked to.
+               </p>
+               <ul>
+                  <li><b>select()</b>Selects the first element that matches the specified selector. </li>
+                  <li><b>selectAll()</b>Selects all elements (in document order) that match the specified selector.</li>
+                  <li><b>data()</b>Binds the data to the items selected before.</li>
+                  <li><b>enter()</b>The enter selection is used to create missing elements corresponding to the data.</li>
+                  <li><b>append()</b>Creates a new html-element for each selected item.</li>
+                  <li><b>text()</b>Sets the text content to given value of all selected elements.</li>
+               </ul>
+               <p>
+                  <b>
+                     The short code-snippet to the right already demonstrates, that with d3.js the document content
+                     primarly depends on input-data.
+                  </b>
+               </p>
+            </div>
+            <img style="width: 16vw; margin: 20px;" src="ressources/snippets/First_Intro.svg" alt="Do not forget in final version"></img>
          </div>
          <!-- what is it used for? -->
          <div class="chapter" id="marketChapter">
@@ -57,6 +72,7 @@
                sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
                sea takimata sanctus est Lorem ipsum dolor sit amet.
             </p>
+            <img class="info-graphic" style="width: 30vw" src="ressources/MarketShare.svg" alt="Do not forget in final version"></img>
          </div>
          <!-- self implemented examples -->
          <div class="chapter" id="selfExamplesChapter">
@@ -79,15 +95,19 @@
          </div>
          <!-- conclusio -->
          <div class="chapter" id="lessonsLearnedChapter">
+            <!-- NOT SURE if image will be the same -->
             <img class="info-graphic" style="width: 20%" src="ressources/LessonsLearned.svg" alt="Do not forget in final version"></img>
             <p class="generic-text">
-               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-               dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-               clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-               consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-               sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-               sea takimata sanctus est Lorem ipsum dolor sit amet.
+               d3js provides a lot of tools to query data and a wide variety of possibilities to render
+               fascinating diagrams from any given data.
+               However, it is not very intuitive und sometimes poorly documented given its popularity.
+               In our opinion using other libraries to build some simple diagrams (trend-lines, bar-charts, ...)
+               might be a better option. For achieving a very specific look or custom features in your
+               data based document, d3js is the way to go.
+               For webdevelopment beginners we highly suggest to take a look in the documentation
+               of the simpler charting library, called Chart.js. <br/>
             </p>
+            <a class="generic-text" href="https://www.chartjs.org/docs/latest/">See the docs of Chart.js</a>
          </div>
          <!-- about us page -->
          <div id="aboutChapter" class="chapter about-chapter">

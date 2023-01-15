@@ -7,6 +7,10 @@
    --navmenu-width: 260px;
 }
 
+html {
+   overflow: auto; /*DANGEROUS, tell me why need this*/
+}
+
 body {
    background-color: var(--background-color);
    font-size: 1.2rem;
@@ -20,6 +24,7 @@ body {
    width: 100%;
    height: 100%;
    margin: 0;
+   overflow: auto; /*DANGEROUS, tell me why need this, OVERTHINK befor final hand-in*/
 }
 
 h1 {
@@ -115,6 +120,7 @@ ul:hover button:hover {
 
 .generic-text {
    margin: 50px;
+   font-size: x-large;
 }
 
 .info-graphic {
@@ -133,4 +139,9 @@ ul:hover button:hover {
       fill: none;
       stroke: #ccc;
       stroke-width: 1.5px;
+}
+
+.limit-width {
+   float: left;
+   width: 500px;
 }

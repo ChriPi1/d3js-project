@@ -10,7 +10,7 @@ function showChapter(chapterID) {
             mainContent.children.dataBasedDocumentsChapter.style.display = "block";
          break;
       case 2:
-            mainContent.children.d3jsChapter.style.display = "block";
+            mainContent.children.d3jsChapter.style.display = "flex";
          break;
       case 3:
             mainContent.children.marketChapter.style.display = "block";
