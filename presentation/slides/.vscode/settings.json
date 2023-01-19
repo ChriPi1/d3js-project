@@ -1,0 +1,8 @@
+{
+    "markdown.styles": [
+        "theme.css"
+    ],
+    "markdown.marp.themes": [
+        "theme.css"
+    ]
+}
