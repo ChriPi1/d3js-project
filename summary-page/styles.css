@@ -149,3 +149,7 @@ ul:hover button:hover {
    float: left;
    width: 500px;
 }
+
+.chapterButton:focus{
+   font-weight: bold;
+}
