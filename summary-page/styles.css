@@ -123,6 +123,10 @@ ul:hover button:hover {
    font-size: x-large;
 }
 
+.highlighted-text {
+   font-weight: 600;
+}
+
 .info-graphic {
    display: block;
    margin-left: auto;

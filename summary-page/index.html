@@ -24,32 +24,32 @@
       </nav>
       <div id="mainContent" class="main">
          <h1>d3js <br> a short introduction</h1>
-         <!-- data based documents -->
-         <div id="dataBasedDocumentsChapter">
-            <img class="info-graphic" style="height: 40%" src="ressources/RegularDocument.svg" alt="Simple document with html-tags, written manually"></img>
+         <!-- data based documents TODO page layout is overfull -->
+         <section id="dataBasedDocumentsChapter">
+            <img class="info-graphic" style="height: 10vw" src="ressources/RegularDocument.svg" alt="Simple document with html-tags, written manually"></img>
             <p class="generic-text">
                Getting tired of creating regular documents manually? Copy and pasting the same tags over and over again, just to fill your webpage with content? 
-               We’ve all been there. It might be a great excercise for beginners to understand, how web technologies work, but what if there was an easier and more elegant way?
+               Weve all been there. It might be a great excercise for beginners to understand, how web technologies work, but what if there was an easier and more elegant way?
             </p>
-            <img class="info-graphic" style="height: 40%" src="ressources/DataDrivenDocument.svg" alt="Data driven document with generated tags based on given data"></img>
+            <img class="info-graphic" style="height: 10vw" src="ressources/DataDrivenDocument.svg" alt="Data driven document with generated tags based on given data"></img>
             <p class="generic-text">
                The content of <b>d</b>ata-<b>d</b>riven-<b>d</b>ocuments (<b>d3</b>) is not defined by markup-text.
                Instead you define rules how the interpreted data affects the final document.
                Often libraries can even manipulate the pages content dynamically, in response to
                changes in underlaying data.
             </p>
-         </div>
-         <!-- d3js explanation TODO ALLIGN CONTENT-->
-         <div class="chapter" id="d3jsChapter">
-            <div class="generic-text" style="width: 60vw;">
-               <p>
+         </section>
+         <!-- d3js explanation -->
+        <section class="chapter" id="d3jsChapter">
+            <div style="width: 60vw;">
+               <p class="generic-text">
                   d3.js is library for manipulating documents based on data.</br>
                   Documents in this context mean html-documents, used for manipulating the DOM. </br>
                   Unlike similar DOM-manipulating libraries, it's main purpose is data-visualization and document-content
                   creation with strong connection to dynamic data.
                   d3.js enables automatically (re-)rendering elements in your document, based on the data it is linked to.
                </p>
-               <ul>
+               <ul class="generic-text">
                   <li><b>select()</b>Selects the first element that matches the specified selector. </li>
                   <li><b>selectAll()</b>Selects all elements (in document order) that match the specified selector.</li>
                   <li><b>data()</b>Binds the data to the items selected before.</li>
@@ -57,17 +57,16 @@
                   <li><b>append()</b>Creates a new html-element for each selected item.</li>
                   <li><b>text()</b>Sets the text content to given value of all selected elements.</li>
                </ul>
-               <p>
-                  <b>
-                     The short code-snippet to the right already demonstrates, that with d3.js the document content
-                     primarly depends on input-data.
-                  </b>
+               <p class="generic-text highlighted-text">
+                  The short code-snippet to the right already demonstrates, that with d3.js the document content
+                  primarly depends on input-data.
                </p>
             </div>
-            <img style="width: 16vw; margin: 20px;" src="ressources/snippets/First_Intro.svg" alt="Do not forget in final version"></img>
-         </div>
+            <img class="info-graphic" style="width: 15vw;" src="ressources/snippets/First_Intro.svg"
+            alt="The explained code snippet, which demonstrates the very basic concept of d3js, is shown."></img>
+         </section>
          <!-- what is it used for? -->
-         <div class="chapter" id="marketChapter">
+         <section class="chapter" id="marketChapter">
             <p class="generic-text">
                According to the website <a href="https://trends.builtwith.com/">trends.builtwith.com</a>
                d3js is the biggest player when it comes to javascript charting libraries. </br>
@@ -86,12 +85,9 @@
                <script language="javascript" type="text/javascript" src="doughnut.js"></script>
             </div>
             <a class="generic-text" href="https://trends.builtwith.com/javascript/charting">more details about the market share</a>
-            <!--
-            <img class="info-graphic" style="width: 30vw" src="ressources/MarketShare.svg" alt="Do not forget in final version"></img>
-            -->
-         </div>
+         </section>
          <!-- self implemented examples -->
-         <div class="chapter" id="selfExamplesChapter">
+         <section class="chapter" id="selfExamplesChapter">
             <p class="generic-text">
                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
                dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
@@ -100,19 +96,43 @@
                sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
                sea takimata sanctus est Lorem ipsum dolor sit amet.
             </p>
-            <!-- <img class="info-graphic" style="width: 25%" src="ressources/SelfExamples.svg" alt="Do not forget in final version"></img> -->
             <div class="tree" id="tree-example">
                <script language="javascript" type="text/javascript" src="tree.js"></script>
             </div>
-         </div>
+         </section>
          <!-- some stuff we found in the web -->
-         <div class="chapter" id="publicExamplesChapter">
-            <img class="info-graphic" style="width: 40%" src="ressources/PublicExamples.svg" alt="Do not forget in final version"></img>
-         </div>
+         <section class="chapter" id="publicExamplesChapter">
+            <!-- <img class="info-graphic" style="width: 40%" src="ressources/PublicExamples.svg" alt="Do not forget in final version"></img> -->
+            <p class="generic-text">
+               Research in the web (blogs, yt-tutorials) shows that a common approach of using <b>d3js</b> is copying
+               public examples and customize them for your use-case-specific requirements.
+               A good place to look for inspirations and outstanding d3js projects is the
+               <a href="https://observablehq.com/@d3/gallery">observablehq d3 example gallery</a>.
+            </p>
+            <p class="generic-text">
+               <i>Observable is a plattform to share data-science documents and collaborate on
+                  projects with team members.
+               </i>
+            </p>
+            <div style="display: flex; flex-direction: row; justify-content: center;">
+               <div style="text-align: center;">
+                  <img class="info-graphic" src="ressources/bubble-chart.svg" style="height: 20vw;"
+                  alt="A bubble-chart example, showing the file size of different library components."></img>
+                  <a href="https://observablehq.com/@d3/bubble-chart">Bubble chart example</a>
+               </div>
+               <div style="text-align: center;">
+                  <img class="info-graphic" src="ressources/force-graph.svg" style="height: 20vw;"
+                  alt="A force-graph example, demonstrating the capabilities of d3's force layout."></img>
+                  <a href="https://observablehq.com/@d3/force-directed-graph">Force graph example</a>
+               </div>
+            </div>
+            <p class="generic-text highlighted-text">
+               Note: Always make sure to check for copyright claims and licenses, before embedding public examples in your own project.
+            </p>
+         </section>
          <!-- conclusio -->
-         <div class="chapter" id="lessonsLearnedChapter">
-            <!-- NOT SURE if image will be the same -->
-            <img class="info-graphic" style="width: 20%" src="ressources/LessonsLearned.svg" alt="Do not forget in final version"></img>
+         <section class="chapter" id="lessonsLearnedChapter">
+            <img class="info-graphic" style="width: 20%" src="ressources/LessonsLearned.svg" alt=""></img>
             <p class="generic-text">
                d3js provides a lot of tools to query data and a wide variety of possibilities to render
                fascinating diagrams from any given data.
@@ -124,9 +144,9 @@
                of the simpler charting library, called Chart.js. <br/>
             </p>
             <a class="generic-text" href="https://www.chartjs.org/docs/latest/">See the docs of Chart.js</a>
-         </div>
+         </section>
          <!-- about us page -->
-         <div id="aboutChapter" class="chapter about-chapter">
+         <section id="aboutChapter" class="chapter about-chapter">
             <div class="about-entry">
                <div style="vertical-align: middle">
                   <img class="portrait-image" src="images/ChristianPichlerSketchy.png"
@@ -142,7 +162,7 @@
                   </p>
                </div>
             </div>
-         </div>
+         </section>
       </div>
    </body>
 
