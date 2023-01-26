@@ -1,0 +1,18 @@
+
+.cinema-seat-occupied {
+    fill: #a20025;
+    stroke: #6f0000;
+}
+
+.cinema-seat-free{
+    fill: #008A00;
+    stroke: #005700;
+}
+
+.cinema-seat-occupied:hover {
+    fill: #e80036;
+}
+
+.cinema-seat-free:hover {
+    fill: #01b801;
+}
