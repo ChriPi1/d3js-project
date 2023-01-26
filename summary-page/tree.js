@@ -122,8 +122,8 @@ let data = {"name" : "SE", "children" : [
 ]};
 
 let createRadialTree = function (input) {
-    let height = 800;
-    let width = 800;
+    let height = 700;
+    let width = 700;
 
     let svg = d3.select('#tree-example')
         .append('svg')

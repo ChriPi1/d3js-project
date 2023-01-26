@@ -86,31 +86,26 @@ ul:hover button:hover {
    padding: 10px;
 }
 
-.about-chapter {
-   margin: 100px 0px 0px 200px;
-}
 
 .portrait-image {
    height: 200px;
    display: block;
-}
-
-.about-entry {
-   display: flex;
-   flex-direction: column;
-   width: 80%;
-   margin-right: 100px;
+   margin: 12px;
 }
 
 .about-entry > div {
    display: flex;
    flex-direction: row;
    align-items: center;
+   justify-content: left;
+   margin: 0px 60px 0px 60px;
 }
 
-.about-entry > div:last-child {
+.about-entry > div:nth-child(even) {
    flex-direction: row-reverse;
+   justify-content: right;
 }
+
 
 .about-text {
    font-style: italic;
