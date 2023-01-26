@@ -10,25 +10,33 @@ Christian Pichler u. Maximilian Burger
 
 ---
 
-## What the heck?
- - What's goin on? :bomb::boom::rocket:
+## data driven documents
+The content of d3-documents is not defined by markup-text. Instead you define rules how the interpreted data affects the final document.
 
 ---
 
-```js
-for (int i = 0; i < 10; i++) {
-    console.log('I am a frontend-dev. life sucks')
-}
-```
+![bg height:35%](pictures/RegularDocument.svg)
+
 ---
 
-![bg right height:50%](pictures/test.svg)
+![bg height:25%](pictures/DataDrivenDocument.svg)
 
-```js
-for (int i = 0; i < 10; i++) {
-    console.log('I am a frontend-dev. life sucks')
-}
-```
 ---
-### Looks good'nuff for us :D
+
+![bg height:80%](pictures/First_Intro.svg)
+
+---
+
+## bar chart example
+
+---
+
+## cinema example
+
+---
+
+## tree example
+
+---
+# Discussion :smiley:
 
