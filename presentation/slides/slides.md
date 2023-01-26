@@ -4,7 +4,6 @@ author: Christian Pichler and Maximilian Burger
 size: 16:9
 theme: paper
 backgroundImage: url(pictures/bg.jpg)
-# d3js <br/> **d**ata **d**riven **d**ocuments
 ---
 # d3*js* - **d**ata **d**riven **d**ocuments
 Christian Pichler u. Maximilian Burger
