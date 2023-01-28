@@ -2,13 +2,9 @@
    --background-color: #ffffff;
    --text-color: #2a2a2a;
    --inactive-color: #a0a0a0;
-   --background-grid-color: #e9e9e9;
+   --background-grid-color: #dfdfdf57;
    --font-family-monospace: "Courier New", Courier, monospace;
    --navmenu-width: 260px;
-}
-
-html {
-   overflow: auto; /*DANGEROUS, tell me why need this*/
 }
 
 body {
@@ -18,13 +14,7 @@ body {
    color:var(--text-color);
    /*generating gridlines with very narrow gradients, lil bit hacky*/
    background-image: linear-gradient(var(--background-grid-color) 0.1rem, transparent 0.1rem), linear-gradient(90deg, var(--background-grid-color) .1rem, transparent .1rem);
-   backdrop-filter: blur(2px);
    background-size: 1.8rem 1.8rem;
-   /*next 3 lines needed for correct layout with blurry background*/
-   width: 100%;
-   height: 100%;
-   margin: 0;
-   overflow: auto; /*DANGEROUS, tell me why need this, OVERTHINK befor final hand-in*/
 }
 
 h1 {
@@ -38,7 +28,6 @@ h1 {
    display: none;
 }
 
-/*sidebar menu*/
 .navmenu {
    height: 100%;
    width: var(--navmenu-width);
@@ -80,6 +69,10 @@ ul:hover button:hover {
    color: var(--text-color);
 }
 
+ul > button:focus{
+   font-weight: bold;
+}
+
 /*here lives the page content*/
 .main {
    margin-left: var(--navmenu-width);
@@ -93,19 +86,18 @@ ul:hover button:hover {
    margin: 12px;
 }
 
-.about-entry > div {
+.entry > div {
    display: flex;
    flex-direction: row;
    align-items: center;
    justify-content: left;
-   margin: 0px 60px 0px 60px;
+   margin: 60px;
 }
 
-.about-entry > div:nth-child(even) {
+.entry > div:nth-child(even) {
    flex-direction: row-reverse;
    justify-content: right;
 }
-
 
 .about-text {
    font-style: italic;
@@ -145,6 +137,8 @@ ul:hover button:hover {
    width: 500px;
 }
 
-.chapterButton:focus{
+pre {
+   font-family: var(--font-family-monospace);
    font-weight: bold;
+   white-space: pre-line;
 }

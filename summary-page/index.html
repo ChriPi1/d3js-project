@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de" style="width: 100%; height: 100%;"> <!-- width and height set because of blurry background -->
+<html lang="de">
 
    <head>
       <meta charset="UTF-8">
@@ -15,13 +15,13 @@
    <body>
       <nav class="navmenu">
          <ul id="navmenuList" class="center-vertical right-navmenu-border">
-            <button onclick="showChapter(1)" class="chapterButton">data based documents</button>
-            <button onclick="showChapter(2)" class="chapterButton">d3js</button>
-            <button onclick="showChapter(3)" class="chapterButton">market</button>
-            <button onclick="showChapter(4)" class="chapterButton">self-implemented examples</button>
-            <button onclick="showChapter(5)" class="chapterButton">public examples</button>
-            <button onclick="showChapter(6)" class="chapterButton">lessons learned</button>
-            <button onclick="showChapter(7)" class="chapterButton">about us</button>
+            <button onclick="showChapter(1)">data based documents</button>
+            <button onclick="showChapter(2)">d3js</button>
+            <button onclick="showChapter(3)">market</button>
+            <button onclick="showChapter(4)">self-implemented examples</button>
+            <button onclick="showChapter(5)">public examples</button>
+            <button onclick="showChapter(6)">lessons learned</button>
+            <button onclick="showChapter(7)">about us</button>
          </ul>
       </nav>
       <div id="mainContent" class="main">
@@ -90,13 +90,41 @@
          </section>
          <!-- self implemented examples -->
          <section class="chapter" id="selfExamplesChapter">
-            <p class="generic-text">BarChart (left chart), right full Code </p>
-            <p class="generic-text">Doughnut / PieChart, (left chart), right maths </p>
-            <p class="generic-text">
-               Tree explanation from Christian. d3.tree short desc
-            </p>
-            <div id="tree-example">
-               <script language="javascript" type="text/javascript" src="tree.js"></script>
+            <div class="entry">
+               <div>
+                  <pre>
+                     let barChartSVG = d3.select("body").select("#barChartContainer")
+                        .append("svg")
+                        .attr("width", barChartWidth)
+                        .attr("height", barChartHeight)
+                        .attr("viewbox", "0 0 200 200");
+
+                     barChartSVG.selectAll("rect")
+                        .data(dataset)
+                        .enter()
+                        .append("rect")
+                        .attr("x", function(d, i){ return i*60 })
+                        .attr("y", function(d){ return barChartHeight - d })
+                        .attr("width", 50)
+                        .attr("height", function(d) { return d })
+                        .attr("fill", "#0082b4")
+                        .attr("opacity", 0.5);
+                  </pre>
+                  <p class="generic-text">
+                     This 
+                  </p>
+                  <div id="barChartContainer" >
+                     <script language="javascript" type="text/javascript" src="barchart.js"></script>
+                  </div>
+               </div>
+               <div>
+                  <p class="generic-text">
+                     Tree explanation from Christian. d3.tree short desc
+                  </p>
+                  <div id="tree-example">
+                     <script language="javascript" type="text/javascript" src="tree.js"></script>
+                  </div>
+               </div>
             </div>
          </section>
          <!-- some stuff we found in the web -->
@@ -147,7 +175,7 @@
          </section>
          <!-- about us page -->
          <section id="aboutChapter" class="chapter">
-            <div class="about-entry center-vertical">
+            <div class="entry center-vertical">
                <div>
                   <img class="portrait-image" src="images/ChristianPichlerSketchy.png"
                      alt="Portrait of Christian Pichler, he is smiling">
