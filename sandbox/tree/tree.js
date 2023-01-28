@@ -130,19 +130,21 @@ let createRadialTree = function (input) {
         .attr('width', width)
         .attr('height', height);
 
+    //prepare tree dimensions according to svg
     let diameter = height * 0.75;
     let radius = diameter / 2;
-
+    
+    //declare seperation for tree layout
     let tree = d3.tree()
         .size([2*Math.PI, radius])
         .separation(function(a, b) { return (a.parent == b.parent ? 1 : 2) / a.depth; });
 
+    //construct root node
     let data = d3.hierarchy(input)
 
-    let treeData = tree(data);
-   
-    let nodes = treeData.descendants();
-    let links = treeData.links();
+    
+    let nodes = tree(data).descendants();
+    let links = tree(data).links();
     
     let graphGroup = svg.append('g')
         .attr('transform', "translate("+(width/2)+","+(height/2)+")");
