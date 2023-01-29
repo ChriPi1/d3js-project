@@ -4,7 +4,6 @@
     --inactive-color: #a0a0a0;
     --background-grid-color: #dfdfdf57;
     --font-family-monospace: "Courier New", Courier, monospace;
-    --navmenu-width: 260px;
  }
  
  body {
@@ -15,7 +14,13 @@
     /*generating gridlines with very narrow gradients, lil bit hacky*/
     background-image: linear-gradient(var(--background-grid-color) 0.1rem, transparent 0.1rem), linear-gradient(90deg, var(--background-grid-color) .1rem, transparent .1rem);
     background-size: 1.8rem 1.8rem;
+    text-align: center;
  }
+
+section {
+    margin: 10px;
+}
+
 
  /*d3 relevant styles*/
 .points {
@@ -31,4 +36,8 @@
 #chartJSArea {
     height: 400px;
     width: 750px;
+    text-align: center;
 }
+canvas {
+    display: inline;
+} 

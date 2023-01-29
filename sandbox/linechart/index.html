@@ -6,13 +6,27 @@
   </head>
 <html>
   <body>
-      <img src="powerconsumption.png"/>
+    <h1>Comparison d3js vs ChartJS</h1>
+    <section>
+      <h2>Original</h2>
+      <p>
+        This chart was found in the web.
+        <a href="https://www.researchgate.net/figure/Active-power-consumption-curve-in-four-seasons_fig4_339417314">source</a>
+      </p>
+      <img src="powerconsumption.png" alt="This chart shows the power-consumption during the day in different seasons."/>
+    </section>
+    <section>
+      <h2>d3js</h2>
       <div id='d3JSArea'>
         <script src='d3chart.js'></script>
       </div>
+    </section>
+    <section>
+      <h2>ChartJS</h2>
       <div id="chartJSArea">
         <script src='chartJSchart.js'></script>
         <canvas id="line-chart" width="750" height="400"></canvas>
       </div>
+    </section>
     </body>
 </html>
