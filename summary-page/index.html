@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="de">
-
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -11,10 +10,18 @@
       <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
       <script src="index.js"></script>
    </head>
-
    <body>
       <nav class="navmenu">
          <ul id="navmenuList" class="center-vertical right-navmenu-border">
+            <a href="#dataBasedDocumentsChapter" onclick="BoldText(this);">data based documents</a>
+            <a href="#d3jsChapter" onclick="BoldText(this);">d3js</a>
+            <a href="#marketChapter" onclick="BoldText(this);">market</a>
+            <a href="#selfExamplesChapter" onclick="BoldText(this);">self implemented examples</a>
+            <a href="#publicExamplesChapter" onclick="BoldText(this);">public examples</a>
+            <a href="#lessonsLearnedChapter" onclick="BoldText(this);">lessons learned</a>
+            <a href="#aboutChapter" onclick="BoldText(this);">about us</a>
+            
+            <!--
             <button onclick="showChapter(1)" >data based documents</button>
             <button onclick="showChapter(2)">d3js</button>
             <button onclick="showChapter(3)">market</button>
@@ -22,11 +29,13 @@
             <button onclick="showChapter(5)">public examples</button>
             <button onclick="showChapter(6)">lessons learned</button>
             <button onclick="showChapter(7)">about us</button>
+            -->
          </ul>
       </nav>
       <div id="mainContent" class="main">
          <h1>d3js <br> a short introduction</h1>
          <!-- data based documents TODO page layout is overfull -->
+         <h2>Data based documents</h2>
          <section id="dataBasedDocumentsChapter">
             <img class="info-graphic" style="height: 10vw" src="ressources/RegularDocument.svg" alt="Simple document with html-tags, written manually"></img>
             <p class="generic-text">
@@ -43,7 +52,9 @@
          </section>
          <hr>
          <!-- d3js explanation -->
-        <section class="chapter" id="d3jsChapter" style="display: flex;">
+        <section class="chapter" id="d3jsChapter" >
+         <h2>d3js</h2>
+         <div style="display: flex;"> 
             <div style="width: 60vw;">
                <p class="generic-text">
                   d3.js is library for manipulating documents based on data.</br>
@@ -67,10 +78,12 @@
             </div>
             <img class="info-graphic" style="width: 15vw;" src="ressources/snippets/First_Intro.svg"
             alt="The explained code snippet, which demonstrates the very basic concept of d3js, is shown."></img>
+         </div>
          </section>
          <hr>
          <!-- what is it used for? -->
          <section class="chapter" id="marketChapter">
+            <h2>market</h2>
             <p class="generic-text">
                According to the website <a href="https://trends.builtwith.com/">trends.builtwith.com</a>
                d3js is the biggest player when it comes to javascript charting libraries. </br>
@@ -93,47 +106,87 @@
          <hr>
          <!-- self implemented examples -->
          <section class="chapter" id="selfExamplesChapter">
+            <h2>self implemented examples</h2>
             <div class="entry">
                <div>
+                  <!-- indentation as written will be in generated document -->
                   <pre>
-                     let barChartSVG = d3.select("body").select("#barChartContainer")
-                        .append("svg")
-                        .attr("width", barChartWidth)
-                        .attr("height", barChartHeight)
-                        .attr("viewbox", "0 0 200 200");
-
-                     barChartSVG.selectAll("rect")
-                        .data(dataset)
-                        .enter()
-                        .append("rect")
-                        .attr("x", function(d, i){ return i*60 })
-                        .attr("y", function(d){ return barChartHeight - d })
-                        .attr("width", 50)
-                        .attr("height", function(d) { return d })
-                        .attr("fill", "#0082b4")
-                        .attr("opacity", 0.5);
+let barChartSVG = d3.select("body").select("#barChartContainer")
+   .append("svg")
+   .attr("width", barChartWidth)
+   .attr("height", barChartHeight)
+   .attr("viewbox", "0 0 200 
+barChartSVG.selectAll("rect")
+   .data(dataset)
+   .enter()
+   .append("rect")
+   .attr("x", function(d, i){ return i*60 })
+   .attr("y", function(d){ return barChartHeight - d })
+   .attr("width", 50)
+   .attr("height", function(d) { return d })
+   .attr("fill", "#0082b4")
+   .attr("opacity", 0.5);
                   </pre>
                   <p class="generic-text">
-                     This 
+                     This example is a basic introduction to d3js.
+                     It shows how DOM-elements are selected and how SVG-Elements
+                     get appended.
                   </p>
-                  <div id="barChartContainer" >
+                  <div id="barChartContainer">
                      <script language="javascript" type="text/javascript" src="barchart.js"></script>
                   </div>
                </div>
+               <div id="pieChartContainer">
+                  <script language="javascript" type="text/javascript" src="piechart.js"></script>
+               </div>
                <div>
-                  <p class="generic-text">
-                     Tree explanation from Christian. d3.tree short desc
-                  </p>
+                  <!-- indentation as written will be in generated document -->
+                  <pre>
+let data = {"name" : "SE", "children" : [
+               {"name" : "1. Sem", "children" : [
+                        {"name" : "LGI","children": [
+                           {"name" : "VO"},
+                           {"name" : "UE"},
+                        ]},
+                        {"name" : "ADE", "children": [
+                           {"name" : "VO"},
+                           {"name" : "UE"},
+                        ]},
+                        {"name" : "EIR", "children": [
+                           {"name" : "VO"},
+                           {"name" : "UE"},
+                        ]},
+                        {"name" : "OS" },
+                        {"name" : "SWE", "children": [
+                           {"name" : "VO"},
+                           {"name" : "UE"},
+                        ]},
+                        {"name" : "BWL" },
+                        {"name" : "Englisch" },
+                        {"name" : "Teambuilding" },
+                  ] }
+                  .
+                  .
+                  .
+                  </pre>
                   <div id="tree-example">
                      <script language="javascript" type="text/javascript" src="tree.js"></script>
                   </div>
                </div>
             </div>
+            <p class="generic-text">
+               D3js contains many different layouts, that are build in to the library itself
+               and are used to facilitate the conversion of data to display. The tree-layout
+               is one of them and is technically an object and a function, meaning that you
+               can use methods to change its behaviour. Like other classes in d3js we can use
+               method chaining to build the layout our data defines.
+            </p>
          </section>
          <hr>
          <!-- some stuff we found in the web -->
          <section class="chapter" id="publicExamplesChapter">
             <!-- <img class="info-graphic" style="width: 40%" src="ressources/PublicExamples.svg" alt="Do not forget in final version"></img> -->
+            <h2>public examples</h2>
             <p class="generic-text">
                Research in the web (blogs, yt-tutorials) shows that a common approach of using <b>d3js</b> is copying
                public examples and customize them for your use-case-specific requirements.
@@ -164,6 +217,7 @@
          <hr>
          <!-- conclusio -->
          <section class="chapter" id="lessonsLearnedChapter">
+            <h2>lessons learned</h2>
             <img class="info-graphic" style="width: 20%" src="ressources/LessonsLearned.svg" alt=""></img>
             <p class="generic-text">
                d3js provides a lot of tools to query data and a wide variety of possibilities to render
@@ -181,6 +235,7 @@
          <hr>
          <!-- about us page -->
          <section id="aboutChapter" class="chapter">
+            <h2>about us</h2>
             <div class="entry">
                <div>
                   <img class="portrait-image" src="images/ChristianPichlerSketchy.png"

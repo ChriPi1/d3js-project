@@ -23,6 +23,12 @@ h1 {
    font-weight: 100;
 }
 
+h2 {
+   font-size: 2.0rem;
+   text-align: center;
+   font-weight: 600;
+}
+
 .chapter {
    /*initial value, overwritten by index.js for page navigation*/
    display: block;
@@ -57,19 +63,31 @@ h1 {
    transform: translateY(-50%);
 }
 
-/*blur all buttons while hovering over navmenu*/
-ul:hover button {
-   filter: blur(2px);
-   color: var(--inactive-color)
+ul > a {
+   display: block;
+   font-size: 1.8rem;
+   color: var(--text-color);
+   text-decoration: none;
+   margin: 10px;
 }
 
-/*unblur the the pointed button*/
-ul:hover button:hover {
+/*blur all links while hovering over navmenu*/
+ul:hover a {
+   filter: blur(2px);
+   color: var(--inactive-color);
+}
+
+/*unblur the the pointed link*/
+ul:hover a:hover {
    filter: blur(0px);
    color: var(--text-color);
 }
 
-ul > button:focus{
+ul > a:active{
+   font-weight: bold;
+}
+
+ul > a:visited{
    font-weight: bold;
 }
 
@@ -135,7 +153,6 @@ ul > button:focus{
 pre {
    font-family: var(--font-family-monospace);
    font-weight: bold;
-   white-space: pre-line;
 }
 
 section {
@@ -145,7 +162,6 @@ section {
 hr {
    border-top: 3px dashed var(--inactive-color);
 }
-
 
 @media only screen and (max-width: 1200px) {
    .entry > div {
