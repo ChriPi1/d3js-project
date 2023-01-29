@@ -129,7 +129,7 @@ ul > button:focus{
 .link-tree {
       fill: none;
       stroke: #ccc;
-      stroke-width: 10px;
+      stroke-width: 5px;
 }
 
 pre {

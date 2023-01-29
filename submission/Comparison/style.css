@@ -1,0 +1,44 @@
+:root {
+    --background-color: #ffffff;
+    --text-color: #2a2a2a;
+    --inactive-color: #a0a0a0;
+    --background-grid-color: #dfdfdf57;
+    --font-family-monospace: "Courier New", Courier, monospace;
+ }
+ 
+ body {
+    background-color: var(--background-color);
+    font-size: 1.2rem;
+    font-family: var(--font-family-monospace);
+    color:var(--text-color);
+    /*generating gridlines with very narrow gradients, lil bit hacky*/
+    background-image: linear-gradient(var(--background-grid-color) 0.1rem, transparent 0.1rem), linear-gradient(90deg, var(--background-grid-color) .1rem, transparent .1rem);
+    background-size: 1.8rem 1.8rem;
+    text-align: center;
+ }
+
+section {
+    margin: 100px;
+}
+
+hr {
+    border-top: 3px dashed var(--inactive-color);
+}
+
+
+ /*d3 relevant styles*/
+.points {
+    visibility: hidden;
+    }
+
+.points:hover {
+    visibility: visible;
+}
+
+/*ChartJS relevant styles*/
+
+#chartJSArea {
+    height: 400px;
+    width: 750px;
+    margin: auto;
+}

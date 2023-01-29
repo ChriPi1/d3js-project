@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    <link rel='stylesheet' href='style.css'>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  </head>
+<html>
+  <body>
+    <h1>Comparison d3js vs ChartJS</h1>
+    <section>
+      <h2>Original</h2>
+      <p>
+        This chart was found in the web.
+        <a href="https://www.researchgate.net/figure/Active-power-consumption-curve-in-four-seasons_fig4_339417314">source</a>
+      </p>
+      <img src="powerconsumption.png" alt="This chart shows the power-consumption during the day in different seasons."/>
+    </section>
+    <hr>
+    <section>
+      <h2>d3js</h2>
+      <div id='d3JSArea'>
+        <script src='d3chart.js'></script>
+      </div>
+    </section>
+    <hr>
+    <section>
+      <h2>ChartJS</h2>
+      <div id="chartJSArea">
+        <script src='chartJSchart.js'></script>
+        <canvas id="line-chart"></canvas>
+      </div>
+    </section>
+    </body>
+</html>
