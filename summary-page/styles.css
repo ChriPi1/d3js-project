@@ -30,38 +30,30 @@ h2 {
    margin: 50px;
 }
 
-.chapter {
-   /*initial value, overwritten by index.js for page navigation*/
-   display: block;
+.about-text {
+   font-style: italic;
+   width: 50%;
+   margin: 24px;
+}
+
+.generic-text {
+   margin: 50px;
+   font-size: x-large;
 }
 
 .navmenu {
    height: 100%;
    width: var(--navmenu-width);
-   /*stays in position while scrolling*/
    position: fixed; 
    left: 0;
 }
 
-.right-navmenu-border {
-   border-right: 2px solid var(--inactive-color);
-}
-
-.navmenu button {
-   padding: 12px 12px;
-   color: var(--text-color);
-   border: none;
-   background: none;
-   font: var(--font-family-monospace);
-   font-size: 1.8rem;
-   text-align: left;
-}
-
-.center-vertical {
+nav > ul {
    margin: 0;
    position: absolute;
    top: 50%;
    transform: translateY(-50%);
+   border-right: 2px solid var(--inactive-color);
 }
 
 ul > a {
@@ -85,10 +77,6 @@ ul:hover a:hover {
 }
 
 ul > a:active{
-   font-weight: bold;
-}
-
-ul > a:visited{
    font-weight: bold;
 }
 
@@ -118,37 +106,10 @@ ul > a:visited{
    justify-content: right;
 }
 
-.about-text {
-   font-style: italic;
-   width: 50%;
-   margin: 24px;
-}
-
-.generic-text {
-   margin: 50px;
-   font-size: x-large;
-}
-
-.highlighted-text {
-   font-weight: 600;
-}
-
 .info-graphic {
    display: block;
    margin-left: auto;
    margin-right: auto;
-}
-
-.tree {
-   display: block;
-   margin: auto;
-   text-align: center;
-}
-
-.link-tree {
-      fill: none;
-      stroke: #ccc;
-      stroke-width: 5px;
 }
 
 pre {
@@ -171,5 +132,9 @@ hr {
    }
    .about-text {
       width: 100%;
+   }
+
+   .generic-text {
+      margin: 5px;
    }
  }

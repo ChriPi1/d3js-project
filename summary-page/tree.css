@@ -1,0 +1,11 @@
+.tree {
+    display: block;
+    margin: auto;
+    text-align: center;
+ }
+ 
+ .link-tree {
+       fill: none;
+       stroke: #ccc;
+       stroke-width: 5px;
+ }

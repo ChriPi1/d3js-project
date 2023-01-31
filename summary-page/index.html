@@ -6,40 +6,33 @@
       <meta name="description" content="A short introduction in d3js.">
       <title>d3js</title>
       <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="tree.css">
       <script src="https://d3js.org/d3.v6.min.js"></script>
       <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
    </head>
    <body>
       <nav class="navmenu">
-         <ul id="navmenuList" class="center-vertical right-navmenu-border">
-            <a href="#dataBasedDocumentsChapter" onclick="BoldText(this);">data based documents</a>
-            <a href="#d3jsChapter" onclick="BoldText(this);">d3js</a>
-            <a href="#marketChapter" onclick="BoldText(this);">market</a>
-            <a href="#selfExamplesChapter" onclick="BoldText(this);">self implemented examples</a>
-            <a href="#publicExamplesChapter" onclick="BoldText(this);">public examples</a>
-            <a href="#lessonsLearnedChapter" onclick="BoldText(this);">lessons learned</a>
-            <a href="#aboutChapter" onclick="BoldText(this);">about us</a>
-            
-            <!--
-            <button onclick="showChapter(1)" >data based documents</button>
-            <button onclick="showChapter(2)">d3js</button>
-            <button onclick="showChapter(3)">market</button>
-            <button onclick="showChapter(4)">self-implemented examples</button>
-            <button onclick="showChapter(5)">public examples</button>
-            <button onclick="showChapter(6)">lessons learned</button>
-            <button onclick="showChapter(7)">about us</button>
-            -->
+         <ul id="navmenuList">
+            <a href="#dataBasedDocumentsChapter">data based documents</a>
+            <a href="#d3jsChapter">d3js</a>
+            <a href="#marketChapter">market</a>
+            <a href="#selfExamplesChapter">self implemented examples</a>
+            <a href="#publicExamplesChapter">public examples</a>
+            <a href="#lessonsLearnedChapter">lessons learned</a>
+            <a href="#aboutChapter">about us</a>
          </ul>
       </nav>
       <div id="mainContent" class="main">
          <h1>d3js <br> a short introduction</h1>
+
+         <!-- what are databased documents? -->
          <span id="dataBasedDocumentsChapter"></span>
          <section>
             <h2>Data based documents</h2>
             <img class="info-graphic" style="height: 10vw" src="ressources/RegularDocument.svg" alt="Simple document with html-tags, written manually"></img>
             <p class="generic-text">
                Getting tired of creating regular documents manually? Copy and pasting the same tags over and over again, just to fill your webpage with content? 
-               Weve all been there. It might be a great excercise for beginners to understand, how web technologies work, but what if there was an easier and more elegant way?
+               We have all been there. It might be a great excercise for beginners to understand, how web technologies work, but what if there was an easier and more elegant way?
             </p>
             <img class="info-graphic" style="height: 10vw" src="ressources/DataDrivenDocument.svg" alt="Data driven document with generated tags based on given data"></img>
             <p class="generic-text">
@@ -50,14 +43,15 @@
             </p>
          </section>
          <hr>
+
          <!-- d3js explanation -->
         <span id="d3jsChapter"></span>
-        <section class="chapter">
+        <section>
          <h2>d3js</h2>
          <div style="display: flex;"> 
             <div style="width: 60vw;">
                <p class="generic-text">
-                  d3.js is library for manipulating documents based on data.</br>
+                  d3.js is a library for manipulating documents based on data.</br>
                   Documents in this context mean html-documents, used for manipulating the DOM. </br>
                   Unlike similar DOM-manipulating libraries, it's main purpose is data-visualization and document-content
                   creation with strong connection to dynamic data.
@@ -71,9 +65,9 @@
                   <li><b>append()</b>Creates a new html-element for each selected item.</li>
                   <li><b>text()</b>Sets the text content to given value of all selected elements.</li>
                </ul>
-               <p class="generic-text highlighted-text">
-                  The short code-snippet to the right already demonstrates, that with d3.js the document content
-                  primarly depends on input-data.
+               <p class="generic-text">
+                  <strong>This short code-snippet to the right already demonstrates, that with d3.js the document content
+                  primarly depends on input-data.</strong> 
                </p>
             </div>
             <img class="info-graphic" style="width: 15vw;" src="ressources/snippets/First_Intro.svg"
@@ -81,9 +75,10 @@
          </div>
          </section>
          <hr>
-         <span id="marketChapter"></span>
+
          <!-- what is it used for? -->
-         <section class="chapter">
+         <span id="marketChapter"></span>
+         <section>
             <h2>market</h2>
             <p class="generic-text">
                According to the website <a href="https://trends.builtwith.com/">trends.builtwith.com</a>
@@ -105,9 +100,10 @@
             <a class="generic-text" href="https://trends.builtwith.com/javascript/charting">more details about the market share</a>
          </section>
          <hr>
-         <span id="selfExamplesChapter"></span>
+
          <!-- self implemented examples -->
-         <section class="chapter">
+         <span id="selfExamplesChapter"></span>
+         <section>
             <h2>self implemented examples</h2>
             <div class="entry">
                <div>
@@ -194,10 +190,10 @@ let data = {"name" : "SE", "children" : [
             </p>
          </section>
          <hr>
-         <span id="publicExamplesChapter"></span>
+
          <!-- some stuff we found in the web -->
-         <section class="chapter">
-            <!-- <img class="info-graphic" style="width: 40%" src="ressources/PublicExamples.svg" alt="Do not forget in final version"></img> -->
+         <span id="publicExamplesChapter"></span>
+         <section>
             <h2>public examples</h2>
             <p class="generic-text">
                Research in the web (blogs, yt-tutorials) shows that a common approach of using <b>d3js</b> is copying
@@ -222,16 +218,17 @@ let data = {"name" : "SE", "children" : [
                   <a href="https://observablehq.com/@d3/force-directed-graph">Force graph example</a>
                </div>
             </div>
-            <p class="generic-text highlighted-text">
-               Note: Always make sure to check for copyright claims and licenses, before embedding public examples in your own project.
+            <p class="generic-text">
+               <strong> Always make sure to check for copyright claims and licenses, before embedding public examples in your own project.</strong>
             </p>
          </section>
          <hr>
+
          <!-- conclusio -->
          <span id="lessonsLearnedChapter"></span>
-         <section class="chapter">
+         <section>
             <h2>lessons learned</h2>
-            <img class="info-graphic" style="width: 20%" src="ressources/LessonsLearned.svg" alt=""></img>
+            <img class="info-graphic" style="width: 20vw" src="ressources/LessonsLearned.svg" alt=""></img>
             <p class="generic-text">
                d3js provides a lot of tools to query data and a wide variety of possibilities to render
                fascinating diagrams from any given data.
@@ -246,9 +243,10 @@ let data = {"name" : "SE", "children" : [
             <a class="generic-text" href="https://www.chartjs.org/docs/latest/">See the docs of Chart.js</a>
          </section>
          <hr>
-         <span id="aboutChapter"></span>
+
          <!-- about us page -->
-         <section class="chapter">
+         <span id="aboutChapter"></span>
+         <section>
             <h2>about us</h2>
             <div class="entry">
                <div>
@@ -266,6 +264,7 @@ let data = {"name" : "SE", "children" : [
                </div>
             </div>
          </section>
+         
       </div>
    </body>
 </html>
