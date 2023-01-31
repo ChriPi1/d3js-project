@@ -13,7 +13,7 @@ let color = d3.scaleOrdinal()
   .range(["#66c2a5","#fc8d62","#8da0cb","#e78ac3","#a6d854","#ffd92f","#e5c494","#b3b3b3"]);
 
 //append a svg to body and center the coordinate system via translate
-let svg = d3.select("body").selectAll("svg")
+let svg = d3.select("#pieChartContainer").selectAll("svg")
     .data(data)
     .enter().append("svg")
     .attr("width", (radius + margin) * 2)
