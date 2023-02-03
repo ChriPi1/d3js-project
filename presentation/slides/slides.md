@@ -19,7 +19,9 @@ Was wir dabei gelernt haben, stellen wir euch gerne vor.
 <!--
 **Christian**
 Was sind data-driven-documents?
-
+- Inhalt nicht durch markup generiert, sondern durch Daten
+- Regeln werden festgelegt mittels js
+- IdR durch DOM-Manipulation
  -->
 
 ## data driven documents
@@ -32,7 +34,8 @@ The content of d3-documents is not defined by markup-text. Instead you define ru
 <!--
 **Christian**
 Reguläres Dokument
-definiert durch Markup-Sprache
+- definiert durch Markup-Sprache
+- Darstellungsmöglichkeiten begrenzt
 -->
 
 ![bg height:35%](pictures/RegularDocument.svg)
@@ -42,8 +45,8 @@ definiert durch Markup-Sprache
 <!--
 **Christian**
 data-driven Dokument
-definiert durch Regeln und verarbeitenden Prozessor
-!!!erzeugt finales Markup-Dokument   
+- definiert durch Regeln und verarbeitenden Prozessor
+- erzeugt finales Markup-Dokument, nicht nur Darstellung am Bildschirm   
 -->
 
 ![bg height:25%](pictures/DataDrivenDocument.svg)
@@ -51,8 +54,13 @@ definiert durch Regeln und verarbeitenden Prozessor
 ---
 <!--
 **Chrisitian**
-einzelne gechainte Functions erklären,
 besonders wichtig, warum werden neue <p>'s erzeugt
+- select()Selects the first element that matches the specified selector.
+- selectAll()Selects all elements (in document order) that match the specified selector.
+- data()Binds the data to the items selected before.
+- enter()The enter selection is used to create missing elements corresponding to the data.
+- append()Creates a new html-element for each selected item.
+- text()Sets the text content to given value of all selected elements
  -->
 
 ![bg height:80%](pictures/First_Intro.svg)
